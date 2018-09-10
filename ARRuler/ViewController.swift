@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  ARRuler
+//  ARRulerMikavaa
 //
 //  Created by Johannes Heinke Business on 10.09.18.
 //  Copyright © 2018 Mikavaa. All rights reserved.
@@ -10,24 +10,57 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+internal final class ViewController: UIViewController, ARSCNViewDelegate, SKViewDelegate, isStateHandler {
 
     @IBOutlet var sceneView: ARSCNView!
     
+    private final var _currentState: State = StartState.init()
+    
+    internal final var currentState: State {
+        get {
+            return self._currentState
+        }
+        
+        set(newState) {
+            self._currentState.removeLayout()
+            self._currentState = newState
+            self._currentState.setup()
+        }
+    }
+    
+    internal final let startState: StartState = StartState.init()
+    internal final let measureState: MeasuringState = MeasuringState.init()
+    internal final let walkingState: WalkingState = WalkingState.init()
+    
+    private final func setupStatePattern() {
+        _ = self.startState.add(content: self)
+        _ = self.measureState.add(content: self)
+        _ = self.walkingState.add(content: self)
+        self._currentState = self.startState
+        self._currentState.setup()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Set the view's delegate
         sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
+        let scene = SCNScene.init()
         // Set the scene to the view
         sceneView.scene = scene
+        self.setupStatePattern()
+    }
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        self._currentState.handleDidRotate()
+    }
+    
+    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        self._currentState.handleWillRotate()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self._currentState.handleTouchesBegan()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +78,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Release any cached data, images, etc that aren't in use.
     }
 
     // MARK: - ARSCNViewDelegate

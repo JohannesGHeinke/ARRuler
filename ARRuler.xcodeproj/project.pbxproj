@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18ACEC6AB3BB19F5565F57CD /* Pods_ARRulerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E31B254A842674499E5202 /* Pods_ARRulerTests.framework */; };
+		790756377B0291AACC17C5E0 /* Pods_ARRulerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A30975EBC8DF996AB477A56 /* Pods_ARRulerUITests.framework */; };
+		B9E493AF0038347386642C22 /* Pods_ARRuler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4811614EF72D5A3ED821D27E /* Pods_ARRuler.framework */; };
 		C620A1AE214701C300412525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620A1AD214701C300412525 /* AppDelegate.swift */; };
 		C620A1B0214701C300412525 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C620A1AF214701C300412525 /* art.scnassets */; };
 		C620A1B2214701C300412525 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620A1B1214701C300412525 /* ViewController.swift */; };
@@ -15,6 +18,13 @@
 		C620A1BA214701C500412525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C620A1B8214701C500412525 /* LaunchScreen.storyboard */; };
 		C620A1C5214701C500412525 /* ARRulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620A1C4214701C500412525 /* ARRulerTests.swift */; };
 		C620A1D0214701C500412525 /* ARRulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620A1CF214701C500412525 /* ARRulerUITests.swift */; };
+		C620A1EC2147039F00412525 /* MeasuringState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620A1E82147039F00412525 /* MeasuringState.swift */; };
+		C620A1ED2147039F00412525 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620A1E92147039F00412525 /* State.swift */; };
+		C620A1EE2147039F00412525 /* WalkingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620A1EA2147039F00412525 /* WalkingState.swift */; };
+		C620A1EF2147039F00412525 /* StartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620A1EB2147039F00412525 /* StartState.swift */; };
+		C620A1F3214703DE00412525 /* SceneKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620A1F1214703DE00412525 /* SceneKitExtension.swift */; };
+		C620A1F4214703DE00412525 /* HitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C620A1F2214703DE00412525 /* HitTest.swift */; };
+		C620A1FA2147045900412525 /* PlaneDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = C620A1F92147045900412525 /* PlaneDetector.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4811614EF72D5A3ED821D27E /* Pods_ARRuler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARRuler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CC2EEDDE0E034C609A53AFD /* Pods-ARRuler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARRuler.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARRuler/Pods-ARRuler.release.xcconfig"; sourceTree = "<group>"; };
+		9A30975EBC8DF996AB477A56 /* Pods_ARRulerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARRulerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3E31B254A842674499E5202 /* Pods_ARRulerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARRulerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5CB1E324C12E076BF3785BA /* Pods-ARRulerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARRulerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARRulerTests/Pods-ARRulerTests.release.xcconfig"; sourceTree = "<group>"; };
 		C620A1AA214701C300412525 /* ARRuler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARRuler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C620A1AD214701C300412525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C620A1AF214701C300412525 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -49,6 +64,19 @@
 		C620A1CB214701C500412525 /* ARRulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARRulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C620A1CF214701C500412525 /* ARRulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARRulerUITests.swift; sourceTree = "<group>"; };
 		C620A1D1214701C500412525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C620A1E82147039F00412525 /* MeasuringState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasuringState.swift; sourceTree = "<group>"; };
+		C620A1E92147039F00412525 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		C620A1EA2147039F00412525 /* WalkingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkingState.swift; sourceTree = "<group>"; };
+		C620A1EB2147039F00412525 /* StartState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartState.swift; sourceTree = "<group>"; };
+		C620A1F1214703DE00412525 /* SceneKitExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneKitExtension.swift; sourceTree = "<group>"; };
+		C620A1F2214703DE00412525 /* HitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitTest.swift; sourceTree = "<group>"; };
+		C620A1F52147041900412525 /* ARRuler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARRuler-Bridging-Header.h"; sourceTree = "<group>"; };
+		C620A1F82147045900412525 /* PlaneDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneDetector.h; sourceTree = "<group>"; };
+		C620A1F92147045900412525 /* PlaneDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlaneDetector.mm; sourceTree = "<group>"; };
+		C732E6A2244B86945AA1D5BB /* Pods-ARRulerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARRulerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARRulerTests/Pods-ARRulerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D59342634BC7D8B3ACE2F045 /* Pods-ARRulerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARRulerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARRulerUITests/Pods-ARRulerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D8B9D6E3DC2BADCB18CAB6E3 /* Pods-ARRuler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARRuler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARRuler/Pods-ARRuler.debug.xcconfig"; sourceTree = "<group>"; };
+		E7BB01A6E0F11EE1CF7F317F /* Pods-ARRulerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARRulerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARRulerUITests/Pods-ARRulerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E493AF0038347386642C22 /* Pods_ARRuler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18ACEC6AB3BB19F5565F57CD /* Pods_ARRulerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +100,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790756377B0291AACC17C5E0 /* Pods_ARRulerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6771FB4C03B0E362AB0B04D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8B9D6E3DC2BADCB18CAB6E3 /* Pods-ARRuler.debug.xcconfig */,
+				7CC2EEDDE0E034C609A53AFD /* Pods-ARRuler.release.xcconfig */,
+				C732E6A2244B86945AA1D5BB /* Pods-ARRulerTests.debug.xcconfig */,
+				B5CB1E324C12E076BF3785BA /* Pods-ARRulerTests.release.xcconfig */,
+				D59342634BC7D8B3ACE2F045 /* Pods-ARRulerUITests.debug.xcconfig */,
+				E7BB01A6E0F11EE1CF7F317F /* Pods-ARRulerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		979FE9F0759CA8505790FD78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4811614EF72D5A3ED821D27E /* Pods_ARRuler.framework */,
+				B3E31B254A842674499E5202 /* Pods_ARRulerTests.framework */,
+				9A30975EBC8DF996AB477A56 /* Pods_ARRulerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C620A1A1214701C300412525 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +137,8 @@
 				C620A1C3214701C500412525 /* ARRulerTests */,
 				C620A1CE214701C500412525 /* ARRulerUITests */,
 				C620A1AB214701C300412525 /* Products */,
+				6771FB4C03B0E362AB0B04D6 /* Pods */,
+				979FE9F0759CA8505790FD78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +155,8 @@
 		C620A1AC214701C300412525 /* ARRuler */ = {
 			isa = PBXGroup;
 			children = (
+				C620A1F0214703DE00412525 /* ARMeasureLogic */,
+				C620A1E72147039F00412525 /* States */,
 				C620A1AD214701C300412525 /* AppDelegate.swift */,
 				C620A1AF214701C300412525 /* art.scnassets */,
 				C620A1B1214701C300412525 /* ViewController.swift */,
@@ -128,6 +186,29 @@
 			path = ARRulerUITests;
 			sourceTree = "<group>";
 		};
+		C620A1E72147039F00412525 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				C620A1E82147039F00412525 /* MeasuringState.swift */,
+				C620A1E92147039F00412525 /* State.swift */,
+				C620A1EA2147039F00412525 /* WalkingState.swift */,
+				C620A1EB2147039F00412525 /* StartState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		C620A1F0214703DE00412525 /* ARMeasureLogic */ = {
+			isa = PBXGroup;
+			children = (
+				C620A1F82147045900412525 /* PlaneDetector.h */,
+				C620A1F92147045900412525 /* PlaneDetector.mm */,
+				C620A1F1214703DE00412525 /* SceneKitExtension.swift */,
+				C620A1F2214703DE00412525 /* HitTest.swift */,
+				C620A1F52147041900412525 /* ARRuler-Bridging-Header.h */,
+			);
+			path = ARMeasureLogic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C620A1D4214701C500412525 /* Build configuration list for PBXNativeTarget "ARRuler" */;
 			buildPhases = (
+				BCA691B402FE86CC977C7D15 /* [CP] Check Pods Manifest.lock */,
 				C620A1A6214701C300412525 /* Sources */,
 				C620A1A7214701C300412525 /* Frameworks */,
 				C620A1A8214701C300412525 /* Resources */,
@@ -152,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C620A1D7214701C500412525 /* Build configuration list for PBXNativeTarget "ARRulerTests" */;
 			buildPhases = (
+				387FA77FD124A892F8949859 /* [CP] Check Pods Manifest.lock */,
 				C620A1BC214701C500412525 /* Sources */,
 				C620A1BD214701C500412525 /* Frameworks */,
 				C620A1BE214701C500412525 /* Resources */,
@@ -170,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C620A1DA214701C500412525 /* Build configuration list for PBXNativeTarget "ARRulerUITests" */;
 			buildPhases = (
+				618A80BBD44EF293CF96F31C /* [CP] Check Pods Manifest.lock */,
 				C620A1C7214701C500412525 /* Sources */,
 				C620A1C8214701C500412525 /* Frameworks */,
 				C620A1C9214701C500412525 /* Resources */,
@@ -196,6 +280,7 @@
 				TargetAttributes = {
 					C620A1A9214701C300412525 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					C620A1BF214701C500412525 = {
 						CreatedOnToolsVersion = 10.0;
@@ -255,6 +340,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		387FA77FD124A892F8949859 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARRulerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		618A80BBD44EF293CF96F31C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARRulerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCA691B402FE86CC977C7D15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARRuler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C620A1A6214701C300412525 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -262,6 +416,13 @@
 			files = (
 				C620A1B2214701C300412525 /* ViewController.swift in Sources */,
 				C620A1AE214701C300412525 /* AppDelegate.swift in Sources */,
+				C620A1EF2147039F00412525 /* StartState.swift in Sources */,
+				C620A1F3214703DE00412525 /* SceneKitExtension.swift in Sources */,
+				C620A1EE2147039F00412525 /* WalkingState.swift in Sources */,
+				C620A1FA2147045900412525 /* PlaneDetector.mm in Sources */,
+				C620A1F4214703DE00412525 /* HitTest.swift in Sources */,
+				C620A1EC2147039F00412525 /* MeasuringState.swift in Sources */,
+				C620A1ED2147039F00412525 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,17 +595,22 @@
 		};
 		C620A1D5214701C500412525 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8B9D6E3DC2BADCB18CAB6E3 /* Pods-ARRuler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VUFYV5UYE2;
 				INFOPLIST_FILE = ARRuler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Mikavaa.ARRuler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARRuler/ARMeasureLogic/ARRuler-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,17 +618,21 @@
 		};
 		C620A1D6214701C500412525 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC2EEDDE0E034C609A53AFD /* Pods-ARRuler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VUFYV5UYE2;
 				INFOPLIST_FILE = ARRuler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Mikavaa.ARRuler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARRuler/ARMeasureLogic/ARRuler-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,6 +640,7 @@
 		};
 		C620A1D8214701C500412525 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C732E6A2244B86945AA1D5BB /* Pods-ARRulerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +662,7 @@
 		};
 		C620A1D9214701C500412525 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5CB1E324C12E076BF3785BA /* Pods-ARRulerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +684,7 @@
 		};
 		C620A1DB214701C500412525 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D59342634BC7D8B3ACE2F045 /* Pods-ARRulerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +705,7 @@
 		};
 		C620A1DC214701C500412525 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7BB01A6E0F11EE1CF7F317F /* Pods-ARRulerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
