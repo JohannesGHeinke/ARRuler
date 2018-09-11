@@ -172,7 +172,7 @@ internal final class MeasuringState: State {
     override func handleUpdate() {
         _ = self.execute({ (viewcontroller) in
             if let results = viewcontroller.sceneView.worldPositionFromScreenPosition(viewcontroller.view.center, objectPos: nil).position, let start = self.start {
-                print("Erhaltene Distanz: \(start.distanceFromPos(pos: results) * 100) cm")
+                self.bottomLabel.text = "\(start.distanceFromPos(pos: results) * 100)cm / 0\""
             }
         })
     }

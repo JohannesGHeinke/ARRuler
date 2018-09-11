@@ -49,6 +49,9 @@ internal final class ViewController: UIViewController, ARSCNViewDelegate, SKView
         // Set the scene to the view
         sceneView.scene = scene
         self.setupStatePattern()
+        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (_) in
+            self._currentState.handleUpdate()
+        })
     }
     
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
@@ -83,10 +86,6 @@ internal final class ViewController: UIViewController, ARSCNViewDelegate, SKView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
-    }
-    
-    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-        self._currentState.handleUpdate()
     }
 
     // MARK: - ARSCNViewDelegate
