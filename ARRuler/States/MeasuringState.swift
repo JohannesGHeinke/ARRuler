@@ -152,10 +152,19 @@ internal final class MeasuringState: State {
         })
     }
     
+    private var start: SCNVector3? = nil
     override func handleTouchesBegan() {
         _ = self.execute({ (viewcontroller) in
-            let results = viewcontroller.sceneView.worldPositionFromScreenPosition(viewcontroller.view.center, objectPos: nil)
-            print(results)
+            if let results = viewcontroller.sceneView.worldPositionFromScreenPosition(viewcontroller.view.center, objectPos: nil).position {
+                if let cStart = self.start {
+                    print(results)
+                    print("Distanz: \(cStart.distanceFromPos(pos: results) * 100) cm")
+                    self.start = nil
+                } else {
+                    print(results)
+                    self.start = results
+                }
+            }
         })
     }
 }
