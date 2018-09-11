@@ -42,4 +42,5 @@ internal class State {
     internal func handleTouchesBegan() {}
     internal func handleDidRotate() {}
     internal func handleWillRotate() {}
+    internal func handleUpdate() {}
 }

@@ -84,6 +84,10 @@ internal final class ViewController: UIViewController, ARSCNViewDelegate, SKView
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
+    
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        self._currentState.handleUpdate()
+    }
 
     // MARK: - ARSCNViewDelegate
     
