@@ -159,6 +159,7 @@ internal final class MeasuringState: State {
                 if let cStart = self.start {
                     print(results)
                     print("Erhaltene Distanz: \(cStart.distanceFromPos(pos: results) * 100) cm")
+                    self.bottomLabel.text = "\(cStart.distanceFromPos(pos: results) * 100)cm / 0\""
                     self.start = nil
                 } else {
                     print(results)
